@@ -16,5 +16,16 @@ public class YahtzeeTest {
 
         assertEquals(yahtzeeThrow.getSum(), 17);
     }
+    @Test
+    public void shouldSumallOnes(){
+        var yahtzeeThrow = new YahtzeeThrow(new Dice[] {
+                new Dice(Value.NUMBER_1),
+                new Dice(Value.NUMBER_4),
+                new Dice(Value.NUMBER_1),
+                new Dice(Value.NUMBER_1),
+                new Dice(Value.NUMBER_3),
+        });
 
+        assertEquals(yahtzeeThrow.getSum(), 3);
+    }
 }
